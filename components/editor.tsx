@@ -9,5 +9,5 @@ export default function Editor() {
   const editor = useCreateBlockNote();
 
   // Renders the editor instance using a React component.
-  return <BlockNoteView  editor={editor} />;
+  return <BlockNoteView className="mt-8"  editor={editor} />;
 }

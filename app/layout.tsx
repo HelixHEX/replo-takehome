@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body className={`${inter.className} flex flex-row`}>
+        <body className={`${inter.className} text-gray-100 bg-slate-950 flex flex-row`}>
           <Sidenav />
           {children}
         </body>
