@@ -38,6 +38,6 @@ export type BlockNoteViewProps = {
   slashMenu?: boolean;
   filePanel?: boolean;
   tableHandles?: boolean;
-  children?: ReactNode
+  children?: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 
