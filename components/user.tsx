@@ -7,7 +7,7 @@ export default function User() {
   if (!user) return null
   return (
     <div className="self-end flex w-full justify-between mb-4 p-2">
-      <p className='font-semibold text-gray-800'>{user.firstName}</p>{}
+      <p className='font-semibold'>{user.firstName}</p>{}
       <UserButton />
     </div>
   );

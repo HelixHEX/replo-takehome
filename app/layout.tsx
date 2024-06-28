@@ -15,9 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      <div className="">
+      <div>
         <Sidenav />
-        <div className="md:ml-[200px]">{children}</div>
+        <div className="md:ml-[250px] bg-[#FCFCFC]">{children}</div>
       </div>
     </Providers>
   );

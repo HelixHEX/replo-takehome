@@ -8,7 +8,11 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <AuthProvider>
       <html lang="en">
-        <body className={`${inter.className} `}>
+        <body
+          style={{
+            fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif",
+          }}
+        >
           <ReactQueryProvider>{children}</ReactQueryProvider>
         </body>
       </html>
