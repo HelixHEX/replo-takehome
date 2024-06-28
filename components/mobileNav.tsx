@@ -22,7 +22,7 @@ export default function MobileNav() {
           </Button>
         </DialogTrigger>
 
-        <DialogContent className="h-screen">
+        <DialogContent style={{height: '80vh'}}>
           <DialogHeader>
             <DialogTitle>Menu</DialogTitle>
             <Docuements />
