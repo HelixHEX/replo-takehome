@@ -21,9 +21,7 @@ export default function Home({ params }: { params: { id: string } }) {
           </div>
         </div>
       </SignedIn>
-      <SignedOut>
-        <Button onClick={() => router.push("/sign-in")}>Sign In</Button>
-      </SignedOut>
+      
     </>
   );
 }

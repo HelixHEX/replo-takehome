@@ -14,7 +14,7 @@ import { AlignJustify } from "lucide-react";
 
 export default function MobileNav() {
   return (
-    <div className="md:hidden ">
+    <div className="md:hidden bg-[#FCFCFC]">
       <Dialog>
         <DialogTrigger asChild className="p-4">
           <Button className="mt-4 ml-4 p-3">

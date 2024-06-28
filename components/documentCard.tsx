@@ -32,7 +32,7 @@ export default function DocumentCard({
           <div className="w-full h-[50px] bg-[#F7F7F5]"></div>
           <div className="p-4 mt-[-28px]">
             <FileText width={22} height={22} />
-            <p className="mt-2 text-[#37352f] text-sm font-medium">{title}</p>
+            <p className="mt-2 line-clamp-1 truncate text-[#37352f] text-sm font-medium">{title}</p>
           </div>
         </div>
       )}
