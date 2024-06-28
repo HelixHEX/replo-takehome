@@ -17,9 +17,6 @@ export default function Editor() {
   const save = (blocks: Block[]) => {
     mutate({ id: document?.id, blocks: JSON.stringify(blocks) });
   };
-  if (status === "loading" || !document) {
-    return null;
-  }
 
   // Creates a new editor instance.
   const editor = useMemo(() => {
@@ -33,6 +30,9 @@ export default function Editor() {
     });
   }, [document.blocks, status]);
 
+  if (status === "loading" || !document) {
+    return null;
+  }
   if (!editor) {
     return null;
   }
