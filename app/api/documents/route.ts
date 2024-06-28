@@ -19,7 +19,6 @@ export async function POST(request: Request) {
     data: {
       title: title,
       userId: user!.id,
-      blocks: "",
     },
   });
 

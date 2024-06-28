@@ -26,7 +26,7 @@ export default function Editor() {
     console.log(document.blocks);
 
     return BlockNoteEditor.create({
-      initialContent: JSON.parse(document.blocks),
+      initialContent: document.blocks ? JSON.parse(document.blocks) : "",
     });
   }, [document.blocks, status]);
 
