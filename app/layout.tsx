@@ -15,13 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      
-          <Sidenav />
-
-          <div className="w-full ml-[200px]">
-            {children}
-          </div>
-        
+      <div className="">
+        <Sidenav />
+        <div className="md:ml-[200px]">{children}</div>
+      </div>
     </Providers>
   );
 }

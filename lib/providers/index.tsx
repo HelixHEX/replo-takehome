@@ -8,7 +8,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <AuthProvider>
       <html lang="en">
-        <body className={`${inter.className} flex flex-row`}>
+        <body className={`${inter.className} `}>
           <ReactQueryProvider>{children}</ReactQueryProvider>
         </body>
       </html>
