@@ -25,7 +25,7 @@ export default function DocumentCard({
           <h1 className=" font-semibold text-primaryText">{title}</h1>
         </div>
       ) : (
-        <div className="mr-4 rounded-md w-[130px] h-[140px] hover:cursor-pointer border-[0.1px] border-r-[0.1px] hover:border-gray-400 border-gray-300">
+        <div className="mr-4 rounded-md w-[230px] h-[140px] hover:cursor-pointer border-[0.1px] border-r-[0.1px] hover:border-gray-400 border-gray-300">
           <div className="w-full h-[50px] bg-[#F7F7F5]"></div>
           <div className="p-4 mt-[-28px]">
             <FileText width={22} height={22} />

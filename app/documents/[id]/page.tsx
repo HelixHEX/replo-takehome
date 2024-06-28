@@ -4,7 +4,7 @@ import { DocumentProvider } from "@/lib/context/document";
 
 export default function Document({ params }: { params: { id: string } }) {
   return (
-    <div className="w-full h-screen p-32 flex flex-col">
+    <div className="w-full h-screen p-4 md:p-32 flex flex-col">
       <DocumentProvider id={params.id}>
         <DocumentName />
         <Editor />

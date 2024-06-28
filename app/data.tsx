@@ -32,11 +32,15 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
         </div>
       )}
       {open && (
-        <div className={`w-full h-full ${style === "vertical" ? "flex" : ""}`}>
+        <div
+          className={`w-full  ${
+            style === "vertical" ? "flex  overflow-x-scroll" : ""
+          }`}
+        >
           {data?.documents && data.documents.length > 0 ? (
             data?.documents.map((document, index) => {
               if (style === "vertical") {
-                if (index < 3) {
+                if (index < 4) {
                   return (
                     <>
                       <DocumentCard
