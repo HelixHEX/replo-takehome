@@ -3,7 +3,11 @@ import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 export async function GET() {
+  const user = await currentUser();
   const documents = await prisma.document.findMany({
+    where: {
+      userId: user!.id,
+    },
     orderBy: {
       createdAt: "desc",
     },
