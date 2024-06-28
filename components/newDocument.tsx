@@ -7,6 +7,7 @@ import {
   DialogContent,
   DialogDescription,
   DialogTitle,
+  DialogClose,
   DialogTrigger,
 } from "./ui/dialog";
 import {
@@ -24,6 +25,8 @@ import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { useCreateDocument } from "@/lib/api/mutations";
 import { useQueryClient } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({ title: z.string().min(1).max(255) });
 
@@ -32,13 +35,20 @@ interface Props {
 }
 export default function NewDocument({ children }: Props) {
   const queryClient = useQueryClient();
-  const { mutate: createDocument, status } = useCreateDocument();
+  const { mutate: createDocument, data, status } = useCreateDocument();
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: "",
     },
   });
+
+  useEffect(() => {
+    if (status === "success" && data) {
+      router.push("/app/" + data.id);
+    }
+  }, [status, router, data]);
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     createDocument(values);
@@ -78,7 +88,9 @@ export default function NewDocument({ children }: Props) {
                     </FormItem>
                   )}
                 />
-                <Button type="submit">Create</Button>
+                <DialogClose asChild>
+                  <Button type="submit">Create</Button>
+                </DialogClose>
               </form>
             </Form>
           </DialogHeader>

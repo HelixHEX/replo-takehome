@@ -31,12 +31,19 @@ export default function Sidenav() {
                 </p>
               </div>
             </div>
-            <Button
-              className="hover:bg-[#eaeae8] flex items-center justify-center h-full w-6 rounded-[2px] p-0"
-              variant={"ghost"}
-            >
-              <SquarePen color="#37352f" width={14} height={14} className="" />
-            </Button>
+            <NewDocument>
+              <Button
+                className="hover:bg-[#eaeae8] flex items-center justify-center h-full w-6 rounded-[2px] p-0"
+                variant={"ghost"}
+              >
+                <SquarePen
+                  color="#37352f"
+                  width={14}
+                  height={14}
+                  className=""
+                />
+              </Button>
+            </NewDocument>
           </div>
         </div>
         <div className=" w-full h-full overflow-y-scroll pt-0 p-2">
