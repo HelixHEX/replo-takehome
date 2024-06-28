@@ -30,6 +30,8 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primaryText: "#5F5E5A",
+        heading: "#37352f",
+        landingHeading: "#050505",
         secondaryText: "#EFEFED",
         seocndaryHover: "#7D7D7C",
         primary: {

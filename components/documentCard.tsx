@@ -19,7 +19,7 @@ export default function DocumentCard({
     <>
       {style === "horizontal" ? (
         <div
-          onClick={() => router.push(`/documents/${id}`)}
+          onClick={() => router.push(`/${id}`)}
           className="flex flex-col  justify-center  p-2 hover:bg-[#EFEFED] hover:cursor-pointer border-gray-300 rounded-md"
         >
           <h1 className=" font-semibold text-primaryText">{title}</h1>

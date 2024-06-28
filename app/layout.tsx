@@ -13,12 +13,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <Providers>
-      <div>
-        <Sidenav />
-        <div className="md:ml-[250px] bg-[#FCFCFC]">{children}</div>
-      </div>
-    </Providers>
-  );
+  return <Providers>{children}</Providers>;
 }
