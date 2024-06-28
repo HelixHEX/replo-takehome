@@ -19,17 +19,20 @@ export default function DocumentCard({
     <>
       {style === "horizontal" ? (
         <div
-          onClick={() => router.push(`/${id}`)}
-          className="flex flex-col  justify-center  p-2 hover:bg-[#EFEFED] hover:cursor-pointer border-gray-300 rounded-md"
+          onClick={() => router.push(`/app/${id}`)}
+          className="flex flex-col  justify-center h-10  p-2 hover:bg-[#EFEFED] hover:cursor-pointer border-gray-300 rounded-md"
         >
-          <h1 className=" font-semibold text-primaryText">{title}</h1>
+          <h1 className=" font-medium text-sm text-primaryText">{title}</h1>
         </div>
       ) : (
-        <div className="mr-4 rounded-md w-[230px] h-[140px] hover:cursor-pointer border-[0.1px] border-r-[0.1px] hover:border-gray-400 border-gray-300">
+        <div
+          onClick={() => router.push(`/app/${id}`)}
+          className="mr-4 rounded-md w-[130px] h-[140px] hover:cursor-pointer border-[0.1px] border-r-[0.1px] hover:border-gray-400 border-gray-300"
+        >
           <div className="w-full h-[50px] bg-[#F7F7F5]"></div>
           <div className="p-4 mt-[-28px]">
             <FileText width={22} height={22} />
-            <p className="mt-2 text-[#37352f] text-sm font-semibold">{title}</p>
+            <p className="mt-2 text-[#37352f] text-sm font-medium">{title}</p>
           </div>
         </div>
       )}

@@ -44,7 +44,7 @@ export const DocumentProvider = ({
   }, [documentData, documentStatus]);
 
   if (status === "loading") {
-    return <div>Loading...</div>;
+    return <div className="w-full h-screen flex flex-col items-center"><p className="mt-2">Loading...</p></div>;
   }
 
   return (

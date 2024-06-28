@@ -6,7 +6,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <div>
       <Sidenav />
       <div className="md:ml-[250px] bg-[#FCFCFC]">
-        <AppNavbar />
+        
         {children}
       </div>
     </div>

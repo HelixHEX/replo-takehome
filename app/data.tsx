@@ -16,7 +16,7 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
   const [open, setOpen] = useState<boolean>(true);
   const [hover, setHover] = useState<boolean>(false);
   if (status === "pending" || !data) {
-    return <div className="w-full h-screen p-4 ">Loading...</div>;
+    return null
   }
 
   return (
@@ -26,7 +26,7 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
           // onMouseEnter={() => setHover(true)}
           // onMouseLeave={() => setHover(false)}
           onClick={() => setOpen(!open)}
-          className="w-full text-sm p-2 hover:bg-[#EFEFED] hover:text-[#5b5955] text-[#91918e] hover:cursor-pointer border-gray-300 rounded-md"
+          className="w-full text-sm font-medium p-2 hover:bg-[#EFEFED] hover:text-[#5b5955] text-[#91918e] hover:cursor-pointer border-gray-300 rounded-md"
         >
           Private
         </div>
