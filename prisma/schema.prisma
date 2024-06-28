@@ -19,5 +19,5 @@ model Document {
   updatedAt DateTime @updatedAt @map("updated_at")
   title     String
   userId    String
-  blocks    String
+  blocks    String   @default("")
 }

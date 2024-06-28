@@ -41,3 +41,9 @@ export type BlockNoteViewProps = {
   children?: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 
+type BlockDocument = {
+  id: string;
+  title: string;
+  userId: string;
+  blocks: string;
+};

@@ -43,6 +43,10 @@ export const DocumentProvider = ({
     }
   }, [documentData, documentStatus]);
 
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
   return (
     <DocumentContext.Provider
       value={{ status, setStatus, document, setDocument }}

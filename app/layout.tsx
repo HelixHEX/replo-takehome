@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/lib/providers";
 import Sidenav from "@/components/sidenav";
-import { UserButton } from "@clerk/nextjs";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,13 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      <html lang="en">
-        <body className={`${inter.className} text-gray-100 bg-slate-950 flex flex-row`}>
-          {/* <Sidenav /> */}
-          
-          {children}
-        </body>
-      </html>
+      
+          <Sidenav />
+
+          <div className="w-full ml-[200px]">
+            {children}
+          </div>
+        
     </Providers>
   );
 }
