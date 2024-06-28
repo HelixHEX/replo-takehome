@@ -10,6 +10,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       <html lang="en">
         <body
           style={{
+            backgroundColor: '#FCFCFC',
             fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif",
           }}
         >
