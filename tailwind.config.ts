@@ -29,7 +29,7 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primaryText: "#2aeed",
+        primaryText: "#5F5E5A",
         secondaryText: "#EFEFED",
         seocndaryHover: "#7D7D7C",
         primary: {

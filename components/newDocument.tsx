@@ -27,7 +27,10 @@ import { useQueryClient } from "@tanstack/react-query";
 
 const formSchema = z.object({ title: z.string().min(1).max(255) });
 
-export default function NewDocument() {
+interface Props {
+  children?: React.ReactNode;
+}
+export default function NewDocument({ children }: Props) {
   const queryClient = useQueryClient();
   const { mutate: createDocument, status } = useCreateDocument();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -39,14 +42,18 @@ export default function NewDocument() {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     createDocument(values);
-   
   };
 
   return (
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="w-full ">New Document</Button>
+          {children ? (
+            children
+          ) : (
+            <Button className="w-full ">New Document</Button>
+          )}
+          {/* <Button className="w-full ">New Document</Button> */}
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
