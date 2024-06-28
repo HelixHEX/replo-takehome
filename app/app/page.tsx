@@ -15,15 +15,14 @@ export default function Home({ params }: { params: { id: string } }) {
           <h1 className="text-center font-semibold text-3xl text-[#37352f]">
             Good Morning, {user?.fullName}
           </h1>
-          <div className="h-[300px] overflow-y-hidden mt-10 w-auto overflow-x-scroll">
+          <div className="h-auto pb-4 overflow-y-hidden mt-10 w-full">
             <div className="p-2 text-[#787774] text-sm">Recently visited</div>
+            <div className="w-full h-full overflow-x-scroll">
             <Documents style="vertical" />
+            </div>
           </div>
         </div>
       </SignedIn>
-      
     </>
   );
 }
-
-

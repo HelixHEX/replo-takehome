@@ -20,7 +20,7 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
   }
 
   return (
-    <>
+    <div className="w-full">
       {sideNav && (
         <div
           // onMouseEnter={() => setHover(true)}
@@ -33,8 +33,8 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
       )}
       {open && (
         <div
-          className={`w-full  ${
-            style === "vertical" ? "flex  overflow-x-scroll" : ""
+          className={`w-full  h-full ${
+            style === "vertical" ? "flex" : ""
           }`}
         >
           {data?.documents && data.documents.length > 0 ? (
@@ -42,14 +42,12 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
               if (style === "vertical") {
                 if (index < 4) {
                   return (
-                    <>
-                      <DocumentCard
-                        key={document.id}
-                        title={document.title}
-                        id={document.id}
-                        style={style}
-                      />
-                    </>
+                    <DocumentCard
+                      key={document.id}
+                      title={document.title}
+                      id={document.id}
+                      style={style}
+                    />
                   );
                 } else return <></>;
               } else {
@@ -84,6 +82,6 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }
