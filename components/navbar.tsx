@@ -13,7 +13,7 @@ export default function Navbar() {
         <h1 className="text-lg font-semibold text-landingHeadin">Notion</h1>
         <div>
           <SignedIn>
-            <UserButton />
+            <UserButton afterSignOutUrl='/' />
           </SignedIn>
           <SignedOut>
             <Button
