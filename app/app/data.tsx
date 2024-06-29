@@ -20,7 +20,7 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
   }
 
   return (
-    <div className="w-full">
+    <div className=" w-auto">
       {sideNav && (
         <div
           // onMouseEnter={() => setHover(true)}
@@ -33,7 +33,7 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
       )}
       {open && (
         <div
-          className={`w-full  h-full ${
+          className={`   h-full ${
             style === "vertical" ? "flex" : ""
           }`}
         >
