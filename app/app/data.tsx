@@ -69,8 +69,8 @@ export default function Documents({ sideNav, style = "horizontal" }: Props) {
           )}
           {style === "vertical" && (
             <NewDocument>
-              <div className="mr-4 rounded-md w-[130px] h-[140px] hover:cursor-pointer border-[0.1px] border-r-[0.1px] hover:border-gray-400 border-gray-300">
-                <div className="w-full h-[50px] bg-[#F7F7F5]"></div>
+              <div className="mr-4 rounded-md w-[130px] h-[140px] hover:cursor-pointer border-[1px] border-r-[0.1px] hover:border-gray-400 border-gray-300">
+                <div className="rounded-md w-full h-[50px] bg-[#F7F7F5]"></div>
                 <div className="p-4 mt-[-28px]">
                   <SquarePlus width={22} height={22} />
                   <p className="mt-2 text-[#37352f] text-sm font-semibold">

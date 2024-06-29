@@ -29,10 +29,10 @@ export default function Sidenav() {
           <div className="hover:bg-[#f0f0ee] hover:cursor-pointer h-8 p-[2px] justify-between rounded-[6px] flex flex-row w-full">
             <div className="ml-[6px] flex flex-row items-center">
               <div className="text-[#777672] bg-[#e1e1df] rounded-[4px] font-medium text-sm w-[20px] h-[20px] flex items-center justify-center">
-                E
+                P
               </div>
               <p className="w-24 text-heading ml-[10px]  text-sm truncate tracking-wide font-medium">
-                Elias Wambugu
+                Personal Workspace
               </p>
 
               <ChevronDown
