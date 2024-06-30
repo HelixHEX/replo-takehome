@@ -9,7 +9,7 @@ export default function AppNavbar() {
   return (
     <div className="w-full h-10 p-2 pl-4 flex justify-between">
       <p className="text-sm">{document?.title}</p>
-      <UserButton afterSignOutUrl='/' />
+      {/* <UserButton afterSignOutUrl='/' /> */}
     </div>
   );
 }

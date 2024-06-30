@@ -7,14 +7,15 @@ import AppNavbar from "@/components/app/navbar";
 import { Clock3 } from "lucide-react";
 export default function Home({ params }: { params: { id: string } }) {
   const router = useRouter();
-  const { user } = useUser();
+  // const { user } = useUser();
   return (
     <>
-      <SignedIn>
+      {/* <SignedIn> */}
         <AppNavbar />
         <div className="w-full h-screen pt-14 p-4 md:pt-6 md:px-36   md:p-32 flex flex-col">
           <h1 className="text-center font-semibold text-3xl text-[#37352f]">
-            Hello, {user?.fullName} 
+            {/* Hello, {user?.fullName}  */}
+            Hello, Elias Wambugu
           </h1>
           <div className=" h-auto pb-4 overflow-y-hidden mt-10 w-auto">
             <div className="p-2 flex">
@@ -26,7 +27,7 @@ export default function Home({ params }: { params: { id: string } }) {
             </div>
           </div>
         </div>
-      </SignedIn>
+      {/* </SignedIn> */}
     </>
   );
 }
