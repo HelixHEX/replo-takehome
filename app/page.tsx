@@ -8,11 +8,6 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home({ params }: { params: { id: string } }) {
   const router = useRouter();
-  // const { user } = useUser();
-
-  // if (user) {
-  //   router.push("/app");
-  // }
 
   return (
     <>

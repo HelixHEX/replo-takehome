@@ -1,3 +1,4 @@
+
 import { getDocumentTitle } from "@/actions";
 import AppNavbar from "@/components/app/navbar";
 import DocumentName from "@/components/documentName";

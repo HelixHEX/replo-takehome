@@ -32,3 +32,19 @@ export async function POST(
 
   return NextResponse.json(document);
 }
+
+export async function PUT(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  const { title } = await request.json();
+
+  const document = await prisma.document.update({
+    where: { id: parseInt(params.id) },
+    data: {
+      title
+    },
+  });
+
+  return NextResponse.json(document);
+}

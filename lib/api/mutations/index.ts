@@ -31,3 +31,29 @@ export const useSaveDocument = (id: string) => {
     mutationFn: saveDocument,
   });
 };
+
+const updateDocumentTitle = async ({
+  id,
+  title,
+}: {
+  id: string;
+  title: string;
+}) => {
+  const res = await axios.put(`/api/documents/${id}`, {
+    id,
+    title,
+  });
+  return res.data;
+};
+
+export const useUpdateDocumentTitle = (id: string) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationKey: ["updateDocumentTitle", id],
+    mutationFn: updateDocumentTitle,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["document", id] });
+      queryClient.invalidateQueries({ queryKey: ["documents"] });
+    },
+  });
+};

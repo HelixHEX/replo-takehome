@@ -11,7 +11,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <div>
       <Sidenav />
       <div className="md:ml-[240px] bg-[#FCFCFC]">
-        
+
         {children}
       </div>
     </div>

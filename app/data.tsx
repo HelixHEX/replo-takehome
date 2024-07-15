@@ -1,10 +1,9 @@
 "use client";
 import DocumentCard from "@/components/documentCard";
 import NewDocument from "@/components/newDocument";
-import { Button } from "@/components/ui/button";
 import { useDocuments } from "@/lib/api/queries";
 import { SquarePlus } from "lucide-react";
-import { useState } from "react";
+import {  useState } from "react";
 
 interface Props {
   sideNav?: boolean;
@@ -14,7 +13,6 @@ interface Props {
 export default function Documents({ sideNav, style = "horizontal" }: Props) {
   const { data, status } = useDocuments();
   const [open, setOpen] = useState<boolean>(true);
-  const [hover, setHover] = useState<boolean>(false);
   if (status === "pending" || !data) {
     return null
   }
