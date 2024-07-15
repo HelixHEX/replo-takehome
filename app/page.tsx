@@ -40,7 +40,7 @@ export default function Home({ params }: { params: { id: string } }) {
             <ArrowRight width={20} height={20} className="ml-2" />
           </Button>
         </div>
-        <svg
+        {/* <svg
           width="1630"
           height="410"
           viewBox="0 -20 1630 364"
@@ -72,7 +72,7 @@ export default function Home({ params }: { params: { id: string } }) {
               ></use>
             </pattern>
           </defs>
-        </svg>
+        </svg> */}
         {/* <div
           className="interactive HomeTIMIHero_heroAsset__v6g7T HomeTIMIHero_heroAssetEnter__bjsJ8"
           style={"}
