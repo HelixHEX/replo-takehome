@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useRouter } from "next/navigation";
 
 const createDocument = async (document: any) => {
   const res = await axios.post("/api/documents", document);
@@ -8,11 +9,13 @@ const createDocument = async (document: any) => {
 
 export const useCreateDocument = () => {
   const queryClient = useQueryClient();
+  const router = useRouter();
   return useMutation({
     mutationKey: ["createDocument"],
     mutationFn: createDocument,
-    onSuccess: () => {
+    onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ["documents"] });
+      router.push(`/${data.id}`)
     },
   });
 };
