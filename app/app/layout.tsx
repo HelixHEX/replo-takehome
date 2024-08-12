@@ -1,5 +1,6 @@
 import AppNavbar from "@/components/app/navbar";
 import Sidenav from "../../components/sidenav";
+import { SignedIn } from "@clerk/nextjs";
 
 export const metadata = {
   title: "Personal Worksp... - Home",
@@ -8,12 +9,11 @@ export const metadata = {
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <SignedIn>
       <Sidenav />
       <div className="md:ml-[240px] bg-[#FCFCFC]">
-
         {children}
       </div>
-    </div>
+    </SignedIn>
   );
 }

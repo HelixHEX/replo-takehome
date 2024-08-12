@@ -1,8 +1,6 @@
 "use client";
-import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import Documents from "./data";
 import Navbar from "@/components/navbar";
 import { ArrowRight } from "lucide-react";
 
