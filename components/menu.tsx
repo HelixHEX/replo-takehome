@@ -1,33 +1,33 @@
 import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
+	Menubar,
+	MenubarContent,
+	MenubarItem,
+	MenubarMenu,
+	MenubarSeparator,
+	MenubarShortcut,
+	MenubarTrigger,
 } from "@/components/ui/menubar";
 
 const Menu = () => {
-  return (
-    <>
-      <Menubar className="ml-8 h-full  p-0 pl-[2px] mt-0 py-0">
-        <MenubarMenu>
-          <MenubarTrigger className="bg-[#]">Product</MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem>
-              New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem>New Window</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>Share</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>Print</MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-      </Menubar>
-    </>
-  );
+	return (
+		<>
+			<Menubar className="ml-8 h-full bg-[#FCFCFC]  p-0 pl-[2px] mt-0 py-0">
+				<MenubarMenu>
+					<MenubarTrigger className="">Product</MenubarTrigger>
+					<MenubarContent>
+						<MenubarItem>
+							New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+						</MenubarItem>
+						<MenubarItem>New Window</MenubarItem>
+						<MenubarSeparator />
+						<MenubarItem>Share</MenubarItem>
+						<MenubarSeparator />
+						<MenubarItem>Print</MenubarItem>
+					</MenubarContent>
+				</MenubarMenu>
+			</Menubar>
+		</>
+	);
 };
 
 export default Menu;
