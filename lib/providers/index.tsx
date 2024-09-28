@@ -35,6 +35,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
         <body
           style={{
+            backgroundColor: "#FCFCFC",
             fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif",
           }}
         >
