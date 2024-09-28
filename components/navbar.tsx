@@ -29,14 +29,14 @@ export default function Navbar({ scrollTop }: { scrollTop: number }) {
 					</SignedIn>
 					<SignedOut>
 						<Button
-							onClick={() => router.push("/sign-in?redirect_url=")}
+							onClick={() => router.push("/sign-in?redirect_url=/app")}
 							className="hover:bg-[#f6f6f6] h-[30px] mr-2 hover:text-[#202020] text-[#202020]"
 							variant="ghost"
 						>
 							<p className="tracking-wide font-medium">Log in</p>
 						</Button>
 						<Button
-							onClick={() => router.push("/sign-up?redirect_url=")}
+							onClick={() => router.push("/sign-up?redirect_url=/app")}
 							className="bg-[#121212] hover:bg-[#333333]  w-32 p-0 h-[30px]  rounded-sm"
 						>
 							<p className="tracking-wide font-normal">Get Notion free</p>
