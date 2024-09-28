@@ -10,7 +10,7 @@ export default function Logo({ width = "100px", height = "30px" }: Props) {
 	return (
 		<>
 			<div
-				onClick={() => router.push("/product")}
+				onClick={() => router.push("/app")}
 				className={"  self-center w-[110px] h-[32px]"}
 			>
 				<svg
