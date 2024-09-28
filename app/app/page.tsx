@@ -15,8 +15,14 @@ export default function Home({ params }: { params: { id: string } }) {
           </h1>
           <div className=" h-auto pb-4 overflow-y-hidden mt-10 w-auto">
             <div className="p-2 flex">
-              <Clock3 width={14} className="self-center text-[#a6a299]" height={14} />
-              <div className="self-center ml-2 text-[#787774] text-sm">Recently visited</div>
+              <Clock3
+                width={14}
+                className="self-center text-[#a6a299]"
+                height={14}
+              />
+              <div className="self-center ml-2 text-[#787774] text-sm">
+                Recently visited
+              </div>
             </div>
             <div className="w-auto h-full">
               <Documents style="vertical" />
